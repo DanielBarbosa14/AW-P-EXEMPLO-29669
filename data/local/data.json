@@ -1,1 +1,49 @@
-{"students":[{"id":"29669","name":"Duarte","city":"Viana do castelo MMM1","birthday":"16-01-2007","courses":"Desenvolvimento Web e Multimedia"},{"id":"29669","name":"Daniel","city":"Viana do castelo","birthday":"16-01-2004","courses":"Desenvolvimento Web e Multimedia"}],"schools":[{"id":"Av. do Atlântico 644 4900","name":"Instituto Politécnico de Viana do Castelo MM","acronym":"ESTG","city":"Viana do Castelo","website":"estg.ipvc.pt"},{"id":"Av. do Atlântico 644 4900","name":"Instituto Politécnico de Viana do Castelo","acronym":"ESTG","city":"Viana do Castelo","website":"estg.ipvc.pt"},{"id":"Av. do Atlântico 644 4900","name":"Instituto Politécnico de Viana do Castelo","acronym":"ESE","city":"Viana do Castelo","website":"estg.ipvc.pt"}],"courses":[{"id":"5008","name":"Desenvolvimento Web e Multimédia MM","acronym":"DWM","school":"Instituto Politécnico de Viana do Castelo"}]}
+{
+    "students": [
+        {
+            "id": "29669",
+            "name": "DuarteM",
+            "city": "Viana do castelo MMM1",
+            "birthday": "16-01-2007",
+            "courses": "Desenvolvimento Web e Multimedia"
+        },
+        {
+            "id": "29669",
+            "name": "Daniel",
+            "city": "Viana do castelo",
+            "birthday": "16-01-2004",
+            "courses": "Desenvolvimento Web e Multimedia"
+        }
+    ],
+    "schools": [
+        {
+            "id": "Av. do Atlântico 644 4900",
+            "name": "Instituto Politécnico de Viana do Castelo MM",
+            "acronym": "ESTG",
+            "city": "Viana do Castelo",
+            "website": "estg.ipvc.pt"
+        },
+        {
+            "id": "Av. do Atlântico 644 4900",
+            "name": "Instituto Politécnico de Viana do Castelo",
+            "acronym": "ESTG",
+            "city": "Viana do Castelo",
+            "website": "estg.ipvc.pt"
+        },
+        {
+            "id": "Av. do Atlântico 644 4900",
+            "name": "Instituto Politécnico de Viana do Castelo",
+            "acronym": "ESE",
+            "city": "Viana do Castelo",
+            "website": "estg.ipvc.pt"
+        }
+    ],
+    "courses": [
+        {
+            "id": "5008",
+            "name": "Desenvolvimento Web e Multimédia MM",
+            "acronym": "DWM",
+            "school": "Instituto Politécnico de Viana do Castelo"
+        }
+    ]
+}
