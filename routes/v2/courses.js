@@ -1,5 +1,9 @@
 const coursesRouter = require('express').Router();
 const controller = require('../../controllers/v2/course');
+const authMiddleware = require('../../middlewares/auth');
+
+
+coursesRouter.use(authMiddleware);
 
 
 coursesRouter.get('/', controller.getAll); 

@@ -43,7 +43,6 @@ exports.create = async (req, res) => {
                 name: name,
                 city: city,
                 birthday: birthday,
-                courses: courses
 
             },
         })

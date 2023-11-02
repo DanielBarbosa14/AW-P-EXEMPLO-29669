@@ -1,6 +1,9 @@
 const studentRouter = require('express').Router();
 const controller = require('../../controllers/v2/student');
+const authMiddleware = require('../../middlewares/auth');
 
+
+studentRouter.use(authMiddleware);
 
 studentRouter.get('/', controller.getAll); 
 studentRouter.get('/:id', controller.getById); 

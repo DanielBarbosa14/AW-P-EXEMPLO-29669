@@ -1,7 +1,7 @@
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient()
 
-//return all schools
+//return all students
 exports.getAll = async (req, res) => {
     try {
         //read all from database
@@ -12,78 +12,79 @@ exports.getAll = async (req, res) => {
     }
 }
 
-//return school by his id (school id)
+//return student by his id (student number)
 exports.getById = async (req, res) => {
-    //get school id requested
+    //get student id requested
     const id = req.params.id;
     try {
-        //finds school by his id (id)
-        const response = await prisma.schools.findUnique({
+        //finds student by his id (number)
+        const response = await prisma.students.findUnique({
             where: {
                 id: id,
             },
         })
-        //return school
+        //return student
         res.status(200).json(response)
     } catch (error) {
         res.status(404).json({ msg: error.message })
     }
 }
 
-//creates school
+//creates student
 exports.create = async (req, res) => {
-    //get requested school properties
-    const { id, name, acronym, city, website } = req.body;
+    //get requested student properties
+    const { id, number, name, city, birthday, courses } = req.body;
     try {
-        //creates new school
-        const school = await prisma.schools.create({
+        //creates new student
+        const student = await prisma.students.create({
             data: {
                 id: id,
+                number: number,
                 name: name,
-                acronym: acronym,
                 city: city,
-                website: website
+                birthday: birthday,
 
             },
         })
-        //return school created
-        res.status(201).json(school)
+        //return student created
+        res.status(201).json(student)
     } catch (error) {
         res.status(400).json({ msg: error.message })
     }
 }
 
-//updates school
+//updates student
 exports.update = async (req, res) => {
-    const { id, name, acronym, city, website } = req.body;
+    const { id, number, name, city, birthday, courses } = req.body;
 
     try {
-        //find school to update their data
-        const school = await prisma.schools.update({
+        //find student to update their data
+        const student = await prisma.students.update({
             where: {
                 id: id,
             },
             data: {
+                number: number,
                 name: name,
-                acronym: acronym,
                 city: city,
-                website: website
+                birthday: birthday,
+                courses: courses
             },
         })
-        //return school updated
-        res.status(200).json(school)
+        //return student updated
+        res.status(200).json(student)
     } catch (error) {
         res.status(400).json({ msg: error.message })
     }
 }
 
-//delete school by his id (student number)
+//delete student by his id (student number)
 exports.delete = async (req, res) => {
-    //get school id requested
+    //get student number requested
     const id = req.params.id;
     try {
-        //delete school
-        await prisma.schools.delete({
+        //delete student
+        await prisma.students.delete({
             where: {
                 id: id,
             },
